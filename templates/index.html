@@ -30,13 +30,29 @@
     </div>
 </section>
 
+<section class="content" style=" min-height: 100vh;
+    background: black;">
+</section>
+
 <script>
     (function () {
         var navbar = document.querySelector('.navbar');
         var banner = document.querySelector('.banner');
         if (!navbar || !banner) return;
-    })
-    
+        function updateNavbar() {
+            var bannerBottom = banner.getBoundingClientRect().bottom;
+            if (bannerBottom <= navbar.offsetHeight) {
+                navbar.classList.add('is-scrolled');
+            } else {
+                navbar.classList.remove('is-scrolled');
+            }
+        }
+
+        window.addEventListener('scroll', updateNavbar, { passive: true });
+        window.addEventListener('resize', updateNavbar);
+        updateNavbar();
+    })();
+
 </script>
 
 {% endblock %}
