@@ -1,7 +1,8 @@
 from django.db import models
 
-class Project(models.Model):
+class SiteSettings(models.Model):
     title = models.CharField(max_length=50, default = "XYN ARTS")
+    subtitle = models.CharField(max_length=50, default = "PORTFOLIO")
     icon = models.CharField(max_length=50, default='✦')
     role_line1 = models.CharField(max_length=30, default = "DIGITAL")
     role_line2 = models.CharField(max_length=30, default = "ILLUSTRATOR")
@@ -15,7 +16,7 @@ class Project(models.Model):
         return self.title
     
     def save (self, *args, **kwargs):
-        if not self.pk and Project.objects.exists():
+        if not self.pk and SiteSettings.objects.exists():
             return
 
         super().save(*args, **kwargs)

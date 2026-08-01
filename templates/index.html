@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ site.title }}{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock %}
+
+{% block body %}
+<nav class="navbar">
+    <a href="{% url 'index' %}" class="nav-logo">{{site.title}}</a>
+</nav>
+
+<section class="banner">
+    <div class="banner-bg" style="background-image: url('{{ site.banner.url }}')">
+    </div>
+
+    <div class="block">
+        <div class="icon">
+            {{ site.icon }}
+        </div>
+
+        <h1 class="title">{{ site.title }}</h1>
+        <div class="subtitle">{{ site.subtitle }}</div>
+    </div>
+
+    <div class="role-block">
+        <div class="roleline">{{ site.role_line1 }} <em>{{ site.role_line2 }}</em></div>
+    </div>
+</section>
+
+<script>
+    (function () {
+        var navbar = document.querySelector('.navbar');
+        var banner = document.querySelector('.banner');
+        if (!navbar || !banner) return;
+    })
+    
+</script>
+
+{% endblock %}

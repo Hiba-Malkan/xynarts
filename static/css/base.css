@@ -1,0 +1,92 @@
+@font-face {
+    font-family: "Cinzel Decorative";
+    src: url("../fonts/CinzelDecorative-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url("../fonts/JetBrainsMono-VariableFont_wght.ttf") format("truetype");
+    font-weight: 100 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Cinzel Decorative";
+    src: url("../fonts/CinzelDecorative-Black.ttf") format("truetype");
+    font-weight: 900;
+    font-style: normal;
+}
+
+:root {
+    --vermilion: #e63c2e;
+    --ink: #1b1b1b;
+    --violet: #4f2d82;
+    --cream: #f3e9d8;
+    --gold: #f0cb86;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+
+}
+
+body {
+    color: var(--cream);
+    font-family: 'JetBrains Mono', monospace;
+    overflow-x: hidden;
+}
+
+::selection {
+    background: var(--violet);
+    color: var(--cream);
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 clamp(1.5rem, 5vw, 6rem);
+    z-index: 100;
+}
+
+.nav-logo {
+    font-family: 'Cinzel Decorative', serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--gold);
+    letter-spacing: 0.1rem;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 400;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em; 
+    color: rgba(243, 233, 216, 0.65);
+    text-decoration: none;
+    transition: color 0.2s ease; 
+}
+.nav-link:hover, .nav-link.active {
+    color: var(--gold);
+
+}
