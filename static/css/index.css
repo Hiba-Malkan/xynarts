@@ -278,6 +278,25 @@ banner-vignette {
     display: inline-block;
 }
 
+.badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    
+}
+
+.badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 400;
+    font-size: 0.76rem;
+    letter-spacing: 0.03em;
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    border: 1.5px solid var(--violet);
+    color: #cbb8f0;
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+
 .contact-wrapper {
     display: flex;
     flex-direction: column;

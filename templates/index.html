@@ -45,25 +45,43 @@
             {% endif %}
         </div>
 
-        <div class="about-heading">
-            {{ site.about_heading | default:"About Me" }} 
-            <p class="about-bio">{{ site.about_bio}}</p>
+        <div>
+            <div class="about-heading">
+                {{ site.about_heading|default:"About me" }}
+            </div>
+            <p class="about-bio">{{ site.about_bio }}</p>
             <div class="about-info-grid">
                 <div class="info-col">
-                    <div class="about-subheading">Contact</div>
+                    <div class="about-section-wrapper">Skills</div>
+                    <div class="badge-row">
+                        <div class="badge">Digital Painting</div>
+                        <div class="badge">Character Design</div>
+                        <div class="badge">Illustration</div>
+                        <div class="badge">Concept Art</div>
+                    </div>
+                </div>
+                <div class="info-col">
+                    <div class="about-section-wrapper">Tools</div>
+                    <div class="badge-row">
+                        <div class="badge">Procreate</div>
+                        <div class="badge">Photoshop</div>
+                        <div class="badge">Clip Studio Paint</div>
+                    </div>
+                </div>
+                <div class="info-col">
+                    <div class="about-section-wrapper">Contact</div>
                     <div class="contact-wrapper">
                         <div class="contact-item">
-                            test1
+                            test
                         </div>
-                        <div class="contact-item">
-                            test2
-                        </div>
+                        <div class="contact-item">@xynarts</div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
 <script>
     (function () {
         var navbar = document.querySelector('.navbar');
