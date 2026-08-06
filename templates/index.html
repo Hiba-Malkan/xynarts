@@ -10,6 +10,9 @@
 {% block body %}
 <nav class="navbar">
     <a href="{% url 'index' %}" class="nav-logo">{{site.title}}</a>
+    <div class="nav-links">
+        <a href="#about" class="nav-link">About</a>
+    </div>
 </nav>
 
 <section class="banner">
@@ -43,13 +46,15 @@
             {% else %}
             <div class="about-photo-img" style="background: var(--ink); border-radius: 150px 150px 10px 10px;"></div>
             {% endif %}
+            <span class="star one">✦</span>
+            <span class="star two">✦</span>
         </div>
 
         <div>
             <div class="about-heading">
                 {{ site.about_heading|default:"About me" }}
             </div>
-            <p class="about-bio">{{ site.about_bio }}</p>
+            <p class="about-text">{{ site.about_text }}</p>
             <div class="about-info-grid">
                 <div class="info-col">
                     <div class="about-section-wrapper">Skills</div>
@@ -71,9 +76,7 @@
                 <div class="info-col">
                     <div class="about-section-wrapper">Contact</div>
                     <div class="contact-wrapper">
-                        <div class="contact-item">
-                            test
-                        </div>
+                        <div class="contact-item">test</div>
                         <div class="contact-item">@xynarts</div>
                     </div>
                 </div>
