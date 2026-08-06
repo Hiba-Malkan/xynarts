@@ -7,6 +7,10 @@ class SiteSettings(models.Model):
     role_line1 = models.CharField(max_length=30, default = "DIGITAL")
     role_line2 = models.CharField(max_length=30, default = "ILLUSTRATOR")
     banner = models.ImageField(upload_to='banner/', blank=True)
+    about_heading = models.CharField(max_length=50, default = "ABOUT ME")
+    about_text = models.TextField(default = '')
+    about_photo = models.ImageField(upload_to='about/', blank=True)
+    about_signature = models.ImageField(upload_to='about/', blank=True)
     
     class Meta: 
         verbose_name = "Site Settings"

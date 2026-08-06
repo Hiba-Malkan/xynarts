@@ -32,10 +32,38 @@
     </div>
 </section>
 
-<section class="content" style=" min-height: 100vh;
-    background: black;">
-</section>
+<section class="about" id="about">
+    {% if site.about_signature %}
+    <img class="about-signature" src="{{ site.about_signature.url }}" alt="Signature">
+    {% endif %}
+    <div class="about-wrapper">
+        <div class="about-photo-wrapper">
+            {% if site.about_photo %}
+            <img class="about-photo" src="{{ site.about_photo.url }}" alt="About Photo">
+            {% else %}
+            <div class="about-photo-img" style="background: var(--ink); border-radius: 150px 150px 10px 10px;"></div>
+            {% endif %}
+        </div>
 
+        <div class="about-heading">
+            {{ site.about_heading | default:"About Me" }} 
+            <p class="about-bio">{{ site.about_bio}}</p>
+            <div class="about-info-grid">
+                <div class="info-col">
+                    <div class="about-subheading">Contact</div>
+                    <div class="contact-wrapper">
+                        <div class="contact-item">
+                            test1
+                        </div>
+                        <div class="contact-item">
+                            test2
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <script>
     (function () {
         var navbar = document.querySelector('.navbar');
