@@ -42,7 +42,7 @@
     <div class="about-wrapper">
         <div class="about-photo-wrapper">
             {% if site.about_photo %}
-            <img class="about-photo" src="{{ site.about_photo.url }}" alt="About Photo">
+            <img class="about-photo-img" src="{{ site.about_photo.url }}" alt="About Photo">
             {% else %}
             <div class="about-photo-img" style="background: var(--ink); border-radius: 150px 150px 10px 10px;"></div>
             {% endif %}
@@ -57,7 +57,7 @@
             <p class="about-text">{{ site.about_text }}</p>
             <div class="about-info-grid">
                 <div class="info-col">
-                    <div class="about-section-wrapper">Skills</div>
+                    <div class="about-subheading">Skills</div>
                     <div class="badge-row">
                         <div class="badge">Digital Painting</div>
                         <div class="badge">Character Design</div>
@@ -76,8 +76,8 @@
                 <div class="info-col">
                     <div class="about-section-wrapper">Contact</div>
                     <div class="contact-wrapper">
-                        <div class="contact-item">test</div>
-                        <div class="contact-item">@xynarts</div>
+                        <div class="contact">test</div>
+                        <div class="contact">@xynarts</div>
                     </div>
                 </div>
             </div>
